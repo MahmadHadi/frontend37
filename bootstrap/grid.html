@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2">
+    
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .page1 {
+            height: 100vh;
+            background-color: aliceblue;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .box {
+            /* width: calc(100 / 3); */
+            height: 100px;
+            border: 1px solid black;
+        }
+        .box1 {
+            background-color: red;
+        }
+        .box2 {
+            background-color: blue;
+        }
+        .box3 {
+            background-color: yellow;
+        }
+        .box4 {
+            background-color: green;
+        }
+
+        @media (width <= 950px) and (height >= 200px) {
+            .page1 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (width <= 450px) {
+            .page1 {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        @media print and (width >= 500px) {
+            .page1 {
+                background-color: yellow !important;
+            }
+            body {
+                background-color: red !important;
+            }
+        }
+    </style>
+    <div class="page1">
+        <div class="box1 box"></div>
+        <div class="box2 box"></div>
+        <div class="box3 box"></div>
+        <div class="box4 box"></div>
+    </div>
+</body>
+</html>
+
+
+to put code on GitHub firsttime first install
+
+then run below command in command prompt from terminal
+git config  user.email yourregistered-email-addressongithub
+
+then run below command in command prompt in terminal
+git config  user.name githubusername
