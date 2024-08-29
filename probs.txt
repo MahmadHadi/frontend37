@@ -1,0 +1,2 @@
+29 aug 
+    generate img using user given height and width  

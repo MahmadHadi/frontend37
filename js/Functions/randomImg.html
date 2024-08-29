@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <p>
+            <input type="number" name="number" id="number" />
+            <button onclick="getImg()">Generate Img</button>
+            <button onclick="renderImg()">Get More Img</button>
+        </p>
+        <div class="container"></div>
+
+        <script>
+            // const randomNumber = Math.floor(Math.random() * 30) + 1;
+            // console.log(randomNumber);
+
+            const container = document.querySelector(".container");
+            const getNumImg = document.querySelector("#number");
+
+            function renderImg() {
+                for (let i = 1; i <= 3; i++) {
+                    // * row
+                    container.innerHTML += `<p>`;
+                    for (let j = 1; j <= 6; j++) {
+                        // col / cell / img
+                        container.innerHTML += `<img src="https://picsum.photos/200/?random=${
+                            Math.floor(Math.random() * 1000) + 1
+                        }" alt=""> &nbsp;`;
+                    }
+                    container.innerHTML += `</p>`;
+                }
+            }
+            function getImg() {
+                container.innerHTML = "";
+                renderImg();
+            }
+            </script>
+    </body>
+</html>
+
+ <!-- for (let i = 1; i <= getNumImg.value; i++) { -->
+     <!-- container.innerHTML += `<img src="https://picsum.photos/200/?random=${ -->
+         <!-- Math.floor(Math.random() * 1000) + 1 -->
+     <!-- }" alt="">`; -->
+ <!-- } -->
+            <!-- container.innerHTML = htmlCode; -->
