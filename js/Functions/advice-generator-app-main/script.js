@@ -18,14 +18,24 @@ const getApi = async function () {
     id.innerHTML = `advice #${advice.slip["id"]}`;
     adviceElem.innerHTML = `"${advice.slip["advice"]}"`;
 
-    copyAdvice(advice.slip["id"], advice.slip["advice"]);
-    adviceOuter = advice.slip["advice"];
-    idOuter = advice.slip["id"];
+    idOuter = `advice #${advice.slip["id"]}`;
+    adviceOuter = `"${advice.slip["advice"]}"`;
 };
 
-const copyAdvice = function () {
-    console.log("outer = ", idOuter);
-    console.log("outer = ", adviceOuter);
-    
-    // window.navigator.clipboard.writeText();
+const callCopy = function () {
+    alert("Coppied ");
+    window.navigator.clipboard.writeText(idOuter + " " + adviceOuter + "\n");
 };
+
+function getSum(num1, num2) {
+    return num1 + num2;
+}
+
+function temp(getSum) {}
+
+temp(function () {
+    console.log("asdf");
+    return 10;
+});
+
+setInterval(() => {}, 100);
