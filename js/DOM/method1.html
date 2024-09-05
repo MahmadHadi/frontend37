@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input
+            type="button"
+            value="Click me"
+            id="btn"
+            onclick="handleClick(this.id, event, this.value)"
+            onmouseover="handleMouseOver()"
+            onmouseleave="handleMouseLeave()"
+        />
+
+        <script>
+            const btn = document.getElementById("btn");
+            const handleClick = (id, e, value) => {
+                // alert("Hello ");
+                // console.log(id);
+                // console.log(e);
+                // console.log(value);
+
+                btn.value = "Clicked ";
+            };
+            const handleMouseOver = () => {
+                btn.style.color = "white";
+                btn.style.backgroundColor = "black";
+                btn.style.fontSize = "30px";
+                btn.style.fontWeight = "200";
+                btn.style.boxShadow = "10px 10px 10px black";
+                btn.style.transition = "500ms linear ";
+                btn.style.border = "1px solid red";
+            };
+            const handleMouseLeave = () => {
+                btn.style.color = "#000"; // black
+                btn.style.backgroundColor = "#fff"; // white
+            };
+        </script>
+    </body>
+</html>

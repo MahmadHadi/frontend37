@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            body {
+                background: #333;
+            }
+            .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+            .overflow-h {
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row1">
+                <div class="col1 | overflow-h">
+                    <img src="https://picsum.photos/100/?random=1" alt="" id="img1" onmouseover="handleMouseOver(this.id)" />
+                </div>
+                <div class="col2 | overflow-h">
+                    <img src="https://picsum.photos/100/?random=2" alt="" id="img2" onmouseover="handleMouseOver(this.id)" />
+                </div>
+                <div class="col3 | overflow-h">
+                    <img src="https://picsum.photos/100/?random=3" alt="" id="img3" onmouseover="handleMouseOver(this.id)" />
+                </div>
+            </div>
+            <div class="row2">
+                <div class="col1 | overflow-h">
+                    <img src="https://picsum.photos/100/?random=11" alt="" id="img4" onmouseover="handleMouseOver(this.id)" />
+                </div>
+                <div class="col2 | overflow-h">
+                    <img src="https://picsum.photos/100/?random=21" alt="" id="img5" onmouseover="handleMouseOver(this.id)" />
+                </div>
+                <div class="col3 | overflow-h">
+                    <img src="https://picsum.photos/100/?random=31" alt="" id="img6" onmouseover="handleMouseOver(this.id)" />
+                </div>
+            </div>
+            <div class="row3">
+                <div class="col1 | overflow-h">
+                    <img src="https://picsum.photos/100/?random=12" alt="" id="img7" onmouseover="handleMouseOver(this.id)" />
+                </div>
+                <div class="col2 | overflow-h">
+                    <img src="https://picsum.photos/100/?random=22" alt="" id="img8" onmouseover="handleMouseOver(this.id)" />
+                </div>
+                <div class="col3 | overflow-h">
+                    <img src="https://picsum.photos/100/?random=32" alt="" id="img9" onmouseover="handleMouseOver(this.id)" />
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const handleMouseOver = (id) => {
+                const img = document.getElementById(id);
+                img.style.scale = 1.75;
+            }
+        </script>
+    </body>
+</html>
