@@ -4,7 +4,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-
         <style>
             body {
                 background-color: #333;
@@ -30,8 +29,6 @@
                         src="https://picsum.photos/175/?random=1"
                         alt=""
                         id="img1"
-                        onmouseover="handleMouseOver(this.id)"
-                        onmouseleave="handleMouseOut(this.id)"
                     />
                 </div>
                 <div class="col2 | overflow-h">
@@ -39,8 +36,6 @@
                         src="https://picsum.photos/175/?random=2"
                         alt=""
                         id="img2"
-                        onmouseover="handleMouseOver(this.id)"
-                        onmouseleave="handleMouseOut(this.id)"
                     />
                 </div>
                 <div class="col3 | overflow-h">
@@ -48,8 +43,6 @@
                         src="https://picsum.photos/175/?random=3"
                         alt=""
                         id="img3"
-                        onmouseover="handleMouseOver(this.id)"
-                        onmouseleave="handleMouseOut(this.id)"
                     />
                 </div>
             </div>
@@ -59,8 +52,6 @@
                         src="https://picsum.photos/175/?random=11"
                         alt=""
                         id="img4"
-                        onmouseover="handleMouseOver(this.id)"
-                        onmouseleave="handleMouseOut(this.id)"
                     />
                 </div>
                 <div class="col2 | overflow-h">
@@ -68,8 +59,6 @@
                         src="https://picsum.photos/175/?random=21"
                         alt=""
                         id="img5"
-                        onmouseover="handleMouseOver(this.id)"
-                        onmouseleave="handleMouseOut(this.id)"
                     />
                 </div>
                 <div class="col3 | overflow-h">
@@ -77,8 +66,6 @@
                         src="https://picsum.photos/175/?random=31"
                         alt=""
                         id="img6"
-                        onmouseover="handleMouseOver(this.id)"
-                        onmouseleave="handleMouseOut(this.id)"
                     />
                 </div>
             </div>
@@ -88,8 +75,6 @@
                         src="https://picsum.photos/175/?random=12"
                         alt=""
                         id="img7"
-                        onmouseover="handleMouseOver(this.id)"
-                        onmouseleave="handleMouseOut(this.id)"
                     />
                 </div>
                 <div class="col2 | overflow-h">
@@ -97,8 +82,6 @@
                         src="https://picsum.photos/175/?random=22"
                         alt=""
                         id="img8"
-                        onmouseover="handleMouseOver(this.id)"
-                        onmouseleave="handleMouseOut(this.id)"
                     />
                 </div>
                 <div class="col3 | overflow-h">
@@ -106,38 +89,92 @@
                         src="https://picsum.photos/175/?random=32"
                         alt=""
                         id="img9"
-                        onmouseover="handleMouseOver(this.id)"
-                        onmouseleave="handleMouseOut(this.id)"
                     />
                 </div>
             </div>
         </div>
 
         <script>
-            // const allImg = document.querySelectorAll("img");
-            // allImg.forEach((elem) => {
-            //     elem.style.border = "10px solid red";
-            // })
+            const body = document.querySelector("body");
+            // body.onscroll = (e) => {
+            //     // console.log("Hello ");
+            //     console.log(e);
+            //     console.log(document.body.scrollTop > 2);
+            //     body.innerHTML += `<div class="container" ><div class="row1">
+            //     <div class="col1 | overflow-h">
+            //         <img
+            //             src="https://picsum.photos/175/?random=1"
+            //             alt=""
+            //             id="img1"
+            //         />
+            //     </div>
+            //     <div class="col2 | overflow-h">
+            //         <img
+            //             src="https://picsum.photos/175/?random=2"
+            //             alt=""
+            //             id="img2"
+            //         />
+            //     </div>
+            //     <div class="col3 | overflow-h">
+            //         <img
+            //             src="https://picsum.photos/175/?random=3"
+            //             alt=""
+            //             id="img3"
+            //         />
+            //     </div>
+            // </div>
+            // <div class="row2">
+            //     <div class="col1 | overflow-h">
+            //         <img
+            //             src="https://picsum.photos/175/?random=11"
+            //             alt=""
+            //             id="img4"
+            //         />
+            //     </div>
+            //     <div class="col2 | overflow-h">
+            //         <img
+            //             src="https://picsum.photos/175/?random=21"
+            //             alt=""
+            //             id="img5"
+            //         />
+            //     </div>
+            //     <div class="col3 | overflow-h">
+            //         <img
+            //             src="https://picsum.photos/175/?random=31"
+            //             alt=""
+            //             id="img6"
+            //         />
+            //     </div>
+            // </div>
+            // <div class="row3">
+            //     <div class="col1 | overflow-h">
+            //         <img
+            //             src="https://picsum.photos/175/?random=12"
+            //             alt=""
+            //             id="img7"
+            //         />
+            //     </div>
+            //     <div class="col2 | overflow-h">
+            //         <img
+            //             src="https://picsum.photos/175/?random=22"
+            //             alt=""
+            //             id="img8"
+            //         />
+            //     </div>
+            //     <div class="col3 | overflow-h">
+            //         <img
+            //             src="https://picsum.photos/175/?random=32"
+            //             alt=""
+            //             id="img9"
+            //         />
+            //     </div>
+            // </div></div>`;
+            // };
 
-            // document.querySelectorAll("img").forEach((elem) => {
-            //     elem.style.border = "10px solid red";
-            // });
-
-            // for (let i = 0; i < allImg.length; i++) {
-            //     allImg[i].style.border = "10px solid yellow";
-            // }
-
-            const handleMouseOver = (id) => { // zoom in 
-                const img = document.getElementById(id);
-                img.style.scale = 1.2;
-                img.style.transition = "scale .2s linear";
-            };
-            
-            const handleMouseOut = (id) => { // zoom out 
-                const img = document.getElementById(id);
-                img.style.scale = 1;
-                img.style.transition = "scale .2s linear";
-            }
+            document.addEventListener("scroll", (e) => {
+                console.log("event", e);
+                // console.log("HEllo ");
+            });
         </script>
     </body>
 </html>
