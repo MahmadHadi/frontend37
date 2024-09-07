@@ -1,3 +1,7 @@
 {
-    "livePreview.defaultPreviewPath": "/js/DOM/method2.html"
+    "livePreview.defaultPreviewPath": "/js/DOM/method2.html",
+    "files.associations": {
+        "*.ejs": "html",
+        "stdio.h": "c"
+    }
 }
