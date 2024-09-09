@@ -6,24 +6,21 @@
         <title>Document</title>
         <style>
             body {
+                height: 100%;
+                width: 100%;
                 background-color: #333;
             }
-            .container {
+            .row {
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
-            }
-            .overflow-h {
-                overflow: hidden;
-            }
-            img {
-                margin: 8px 0;
+                margin: 10px 0;
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <div class="row1">
+            <div class="row row1">
                 <div class="col1 | overflow-h">
                     <img
                         src="https://picsum.photos/175/?random=1"
@@ -46,7 +43,7 @@
                     />
                 </div>
             </div>
-            <div class="row2">
+            <div class="row row2">
                 <div class="col1 | overflow-h">
                     <img
                         src="https://picsum.photos/175/?random=11"
@@ -69,7 +66,7 @@
                     />
                 </div>
             </div>
-            <div class="row3">
+            <div class="row row3">
                 <div class="col1 | overflow-h">
                     <img
                         src="https://picsum.photos/175/?random=12"
@@ -93,87 +90,79 @@
                 </div>
             </div>
         </div>
+        <!-- <script>
+            const content = `<div class="row row3">
+                <div class="col1 | overflow-h">
+                    <img
+                        src="https://picsum.photos/175/?random=12"
+                        alt=""
+                        id="img7"
+                    />
+                </div>
+                <div class="col2 | overflow-h">
+                    <img
+                        src="https://picsum.photos/175/?random=22"
+                        alt=""
+                        id="img8"
+                    />
+                </div>
+                <div class="col3 | overflow-h">
+                    <img
+                        src="https://picsum.photos/175/?random=32"
+                        alt=""
+                        id="img9"
+                    />
+                </div>
+            </div>`;
+
+            const body = document.querySelector("body");
+            const container = document.querySelector(".container");
+            body.addEventListener("scroll", () => {
+                console.log('asdf ');
+            })
+        </script> -->
 
         <script>
-            const body = document.querySelector("body");
-            // body.onscroll = (e) => {
-            //     // console.log("Hello ");
-            //     console.log(e);
-            //     console.log(document.body.scrollTop > 2);
-            //     body.innerHTML += `<div class="container" ><div class="row1">
-            //     <div class="col1 | overflow-h">
-            //         <img
-            //             src="https://picsum.photos/175/?random=1"
-            //             alt=""
-            //             id="img1"
-            //         />
-            //     </div>
-            //     <div class="col2 | overflow-h">
-            //         <img
-            //             src="https://picsum.photos/175/?random=2"
-            //             alt=""
-            //             id="img2"
-            //         />
-            //     </div>
-            //     <div class="col3 | overflow-h">
-            //         <img
-            //             src="https://picsum.photos/175/?random=3"
-            //             alt=""
-            //             id="img3"
-            //         />
-            //     </div>
-            // </div>
-            // <div class="row2">
-            //     <div class="col1 | overflow-h">
-            //         <img
-            //             src="https://picsum.photos/175/?random=11"
-            //             alt=""
-            //             id="img4"
-            //         />
-            //     </div>
-            //     <div class="col2 | overflow-h">
-            //         <img
-            //             src="https://picsum.photos/175/?random=21"
-            //             alt=""
-            //             id="img5"
-            //         />
-            //     </div>
-            //     <div class="col3 | overflow-h">
-            //         <img
-            //             src="https://picsum.photos/175/?random=31"
-            //             alt=""
-            //             id="img6"
-            //         />
-            //     </div>
-            // </div>
-            // <div class="row3">
-            //     <div class="col1 | overflow-h">
-            //         <img
-            //             src="https://picsum.photos/175/?random=12"
-            //             alt=""
-            //             id="img7"
-            //         />
-            //     </div>
-            //     <div class="col2 | overflow-h">
-            //         <img
-            //             src="https://picsum.photos/175/?random=22"
-            //             alt=""
-            //             id="img8"
-            //         />
-            //     </div>
-            //     <div class="col3 | overflow-h">
-            //         <img
-            //             src="https://picsum.photos/175/?random=32"
-            //             alt=""
-            //             id="img9"
-            //         />
-            //     </div>
-            // </div></div>`;
-            // };
+            const content = `<div class="row row3">
+        <div class="col1 | overflow-h">
+            <img
+                src="https://picsum.photos/175/?random=${Math.floor(
+                    Math.random() * 100
+                )}"
+                alt=""
+            />
+        </div>
+        <div class="col2 | overflow-h">
+            <img
+                src="https://picsum.photos/175/?random=${Math.floor(
+                    Math.random() * 100
+                )}"
+                alt=""
+            />
+        </div>
+        <div class="col3 | overflow-h">
+            <img
+                src="https://picsum.photos/175/?random=${Math.floor(
+                    Math.random() * 100
+                )}"
+                alt=""
+            />
+        </div>
+    </div>`;
 
-            document.addEventListener("scroll", (e) => {
-                console.log("event", e);
-                // console.log("HEllo ");
+            const container = document.querySelector(".container");
+            
+            window.addEventListener("scroll", () => {
+                console.log( window.innerHeight, window.scrollY, document.body.offsetHeight - 344 
+                );
+                // Check if the user is near the bottom of the page
+                if (
+                    window.innerHeight + window.scrollY >=
+                    document.body.offsetHeight - 344
+                ) {
+                    // Add new content
+                    container.innerHTML += content;
+                }
             });
         </script>
     </body>
