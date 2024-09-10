@@ -1,2 +1,4 @@
 29 aug 
     generate img using user given height and width  
+10 sep 
+    generate random height and width of circle {b/w 50px - 200px}

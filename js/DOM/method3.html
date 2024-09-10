@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 class="h1-1" style="background-color: aqua">Lorem, ipsum.</h1>
+
+        <h1 class="h1-2">Remove event Listener</h1>
+
+        <script>
+            const h11 = document.querySelector(".h1-1");
+            const h12 = document.querySelector(".h1-2");
+            h11.addEventListener("mouseover", (e) => {
+                // alert("Hello ");
+                // console.log(e);
+
+                console.log("Mouse moved 1");
+            });
+            // h1.addEventListener("mousemove", () => {
+            //     console.log("mouse moved ");
+            // })
+
+            h11.onmousemove = () => {
+                console.log("Mouse moved 2");
+            };
+
+            function showAlert() {
+                alert("showAlert");
+                h12.removeEventListener("click", showAlert);
+            }
+
+            h12.addEventListener("click", showAlert);
+        </script>
+    </body>
+</html>
