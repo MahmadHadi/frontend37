@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            body {
+                background-color: #333;
+                padding: 0;
+                margin: 0;
+            }
+            .div {
+                height: 100px;
+                width: 100px;
+                background: yellow;
+                position: absolute;
+                /* transition: all 0.1s linear; */
+                transform: translate(-50%, -50%);
+                z-index: 2;
+            }
+            .overlay {
+                position: relative;
+                height: 100vh;
+                width: 100vw;
+                /* background-color: rgba(0, 0, 255, 0.312); */
+            }
+        </style>
+        <div class="div"></div>
+        <div class="overlay"></div>
+
+        <script>
+            const div = document.querySelector(".div");
+            const overlay = document.querySelector(".overlay");
+
+            const moveCard = (e) => {
+                div.style.border = "2px solid red";
+                div.style.top = e.clientY + "px";
+                div.style.left = e.clientX + "px";
+            };
+
+            div.addEventListener("mousedown", () => {
+                overlay.style.zIndex = 5;
+                overlay.addEventListener("mousemove", moveCard);
+            });
+            
+            overlay.addEventListener("mouseup", () => {
+                overlay.style.zIndex = 0;
+                div.style.border = "";
+                overlay.removeEventListener("mousemove", moveCard);
+            });
+        </script>
+    </body>
+</html>

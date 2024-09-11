@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            body {
+                background: #333;
+            }
+            .a {
+                height: 500px;
+                width: 500px;
+                background: yellow;
+            }
+            .b {
+                height: 300px;
+                width: 300px;
+                background: red;
+            }
+            .c {
+                height: 100px;
+                width: 100px;
+                background: rgb(122, 122, 187);
+            }
+            .center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .a:hover {
+                border: 5px solid black;
+            }
+        </style>
+        <div class="a | center">
+            a
+            <div class="b | center">
+                b
+                <div class="c | center">c</div>
+            </div>
+        </div>
+
+        <script>
+            const a = document.querySelector(".a");
+            const b = document.querySelector(".b");
+            const c = document.querySelector(".c");
+            a.addEventListener(
+                "click",
+                () => {
+                    alert("a ");
+                },
+                true
+            );
+            b.addEventListener(
+                "click",
+                () => {
+                    alert("b ");
+                },
+                true
+            );
+            c.addEventListener(
+                "click",
+                () => {
+                    alert("c ");
+                },
+                true
+            );
+        </script>
+    </body>
+</html>
