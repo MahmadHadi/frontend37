@@ -1,0 +1,11 @@
+
+/* black spades (♠), red hearts (♥), blue diamonds (♦), and green clubs (♣) */
+
+/* 8 - num {2 - 10}
+4 - alpha -> king { 13 } , queen { 12 }, jake { 11 }, akko { 1 }  */
+
+
+card generation 
+card move
+score 
+timer 
