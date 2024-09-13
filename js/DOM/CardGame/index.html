@@ -7,17 +7,31 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body class="flex flex-col j-between">
+
+        <div class="overlay"></div>
+
         <header class="flex j-between">
             <div class="score">10 - 10</div>
             <div class="timer">10 : 10</div>
-            <div class="cards | flex j-center i-center"> <span class="card-num1">4</span> <span class="card-icon">♠</span> <span class="card-num2">4</span> </div>
+            
+            <div class="cardSet">
+                <div class="abs">
+                    <div class="cards | flex j-center i-center">
+                        <span class="card-num1">4</span>
+                        <span class="card-icon">♠</span>
+                        <span class="card-num2">4</span>
+                    </div>
+                </div>
+            </div>
         </header>
+
         <footer class="flex i-center j-between">
             <div class="red-heart | clr-red flex i-center j-center">♥</div>
             <div class="blue-diamond | clr-red flex i-center j-center">♦</div>
             <div class="balck-spades | clr-black flex i-center j-center">♠</div>
             <div class="green-club | clr-black flex i-center j-center">♣</div>
         </footer>
+
         <script src="script.js"></script>
     </body>
 </html>

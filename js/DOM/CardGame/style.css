@@ -37,16 +37,39 @@ body {
     color: black;
 }
 
+body {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 0, 0, 0.425);
+    z-index: -2;
+}
 
 header {
     height: 50%;
     padding: 0.5rem 2rem;
 }
-
-
-.cards {
+header {
+    position: relative;
+}
+.cardSet {
+    height: 40%;
+    width: 30%;
+}
+.abs {
     height: 75%;
-    width: 15%;
+    width: 14%;
+    position: absolute;
+}
+.cards {
+    height: 100%;
+    width: 100%;
     background: white;
     position: relative;
     border-radius: 5px;
