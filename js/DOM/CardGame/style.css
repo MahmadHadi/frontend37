@@ -66,6 +66,7 @@ header {
     height: 75%;
     width: 14%;
     position: absolute;
+    transform: translate(-50%, -50%);
 }
 .cards {
     height: 100%;

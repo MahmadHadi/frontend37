@@ -1,33 +1,54 @@
-// * move card
-function moveCard() {
-    let card = document.querySelectorAll(".abs");
-    let overlay = document.querySelector(".overlay");
-    let cardSet = document.querySelector(".cardSet");
-    let count = 0
-    card.forEach((elem, i) => {
-        elem.addEventListener("mousedown", () => {
+const cardSet = document.querySelector(".cardSet");
+const overlay = document.querySelector(".overlay");
 
-            let newCard = document.createElement("div");
-            newCard.className = "abs";
-            newCard.innerHTML = `<div class="cards | flex j-center i-center">
-                                    <span class="card-num1">${count}</span>
-                                    <span class="card-icon">hadi </span>
-                                    <span class="card-num2">4</span>
-                                </div>`;
-            cardSet.appendChild(newCard);
-            elem.style.position = "absolute";
-            elem.style.transform = "translate(-50%, -50%)";
-            overlay.style.zIndex = 3;
+// ! used querySelectorAll
+const allCards = document.querySelectorAll(".abs");
+console.log(allCards);
+
+allCards.forEach((elem, i) => {
+    console.log(elem);
+    elem.addEventListener("mousedown", createCard);
+});
+
+let counter = 0;
+
+function createCard() {
+    counter++;
+    // alert("asdf ");
+    console.log(allCards);
+    const content = `<div class="cards | flex j-center i-center" style="position: absolute; z-index: ${counter}">
+                            <span class="card-num1">${counter}</span>
+                            <span class="card-icon">♠</span>
+                            <span class="card-num2">${counter}</span>
+                        </div>`;
+    const newCard = document.createElement("div");
+
+    newCard.className = "abs";
+    newCard.innerHTML = content;
+    newCard.setAttribute("onclick", "createCard()");
+
+    // draggable="true" ondragstart="moveCard(e)">
+    newCard.setAttribute("draggable", "true");
+    newCard.setAttribute("ondrag", "moveCard(e)");
+
+    cardSet.appendChild(newCard);
+    moveCard();
+}
+
+// * move card
+function moveCard(e) {
+    console.log("e", e)
+    allCards.forEach((elem) => {
+        elem.addEventListener("mousedown", (e) => {
+            overlay.style.zIndex = 1000;
         });
-    });
-    cardSet.forEach((elem, i) => {
         overlay.addEventListener("mousemove", (e) => {
             elem.style.top = e.clientY + "px";
             elem.style.left = e.clientX + "px";
         });
-    })
-    overlay.addEventListener("mouseup", () => {
-        overlay.style.zIndex = -2;
+        overlay.addEventListener("mouseup", () => {
+            overlay.style.zIndex = -12;
+        });
     });
 }
 
