@@ -3,7 +3,6 @@
     padding: 0;
     font-family: sans-serif;
     color: white;
-    /* border: 1px solid red; */
 }
 
 html,
@@ -12,27 +11,35 @@ body {
     width: 100%;
     background: #333;
 }
+
 .flex {
     display: flex;
 }
+
 .i-center {
     align-items: center;
 }
+
 .j-center {
     justify-content: center;
 }
+
 .j-evenly {
     justify-content: space-evenly;
 }
+
 .j-between {
     justify-content: space-between;
 }
+
 .flex-col {
     flex-direction: column;
 }
+
 .clr-red {
     color: red;
 }
+
 .clr-black {
     color: black;
 }
@@ -54,20 +61,21 @@ body {
 header {
     height: 50%;
     padding: 0.5rem 2rem;
-}
-header {
     position: relative;
 }
+
 .cardSet {
     height: 40%;
     width: 30%;
 }
+
 .abs {
     height: 75%;
     width: 14%;
     position: absolute;
     transform: translate(-50%, -50%);
 }
+
 .cards {
     height: 100%;
     width: 100%;
@@ -75,28 +83,32 @@ header {
     position: relative;
     border-radius: 5px;
 }
+
 .cards span {
     color: black;
 }
+
 .card-num1 {
     position: absolute;
     top: 10px;
     left: 10px;
 }
+
 .card-num2 {
     position: absolute;
     bottom: 10px;
     right: 10px;
 }
+
 .card-icon {
     font-size: 3rem;
 }
 
-
 footer {
     height: 50%;
-    padding: 0.5rem 2rem;   
+    padding: 0.5rem 2rem;
 }
+
 footer * {
     height: 75%;
     width: 15%;
@@ -105,3 +117,31 @@ footer * {
     border-radius: 5px;
 }
 
+.drop-target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid yellow;
+}
+
+.dragged-card {
+    height: 200px;
+    width: 150px;
+    position: relative;
+}
+.dragged-card .card-num1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.dragged-card .card-num2 {
+    position: absolute;
+    bottom: -99px;
+    right: 10px;
+    border: 0;
+}
+.dragged-card .card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
