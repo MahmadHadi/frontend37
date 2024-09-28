@@ -10,10 +10,9 @@ btn.addEventListener("click", async () => {
         return;
     }
 
-    // const data = fetch(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=` + link.value)
-    const data = await fetch(
-        `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${link.value}`
-    );
+    // const data = await fetch(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=` + link.value)
+
+    const data = await fetch(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${link.value}`);
     // console.log(data.url);
 
     img.src = data.url;

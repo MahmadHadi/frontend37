@@ -1,4 +1,5 @@
-const api = "http://127.0.0.1:3000/card-data.json";
+// const api = "http://127.0.0.1:3000/card-data.json";
+const api = "/card-data.json";
 
 const generateCard = async () => {
     const container = document.querySelector(".container");

@@ -3,5 +3,6 @@
 10 sep 
     generate random height and width of circle {b/w 50px - 200px}
 
-27 sep 
-    
+28 sep 
+    https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca
+        ./card 
